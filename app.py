@@ -23,7 +23,7 @@ if user_question !="" and not user_question.strip().isspace() and not user_quest
           st.write(output['text'])
           if 'sourceDocuments' in output:
               st.write("Source:")
-              for doc in output['sourceDocuments']:
+              for i, doc in enumerate(output['sourceDocuments'], start=1):
                   if 'metadata' in doc and 'source' in doc['metadata']:
                       source_url = doc['metadata']['source']
-                      st.write(f"Source: {source_url}")
+                      st.write(f"{i}: {source_url}")
