@@ -14,8 +14,7 @@ if user_question !="" and not user_question.strip().isspace() and not user_quest
       #question_prefix="Assistant is designed to answer user questions only based on information from USinoIP's website www.usinoip.com. If Assistant is not able to find an answer to user question, just response to the user that assistant cannot find an answer. Assistant should never make up an answer. Remember, Assistant should ONLY use information from USinoIP's website www.usinoip.com as the knowledge base."
       #input_question=question_prefix+user_question
       output = query({
-#      "question": input_question,
-      "question": user_question,    
-    })
+          "question": user_question,
+      })
       st.write("AI Response:")
       st.write(output)
