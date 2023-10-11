@@ -16,5 +16,13 @@ if user_question !="" and not user_question.strip().isspace() and not user_quest
       output = query({
           "question": user_question,
       })
-      st.write("AI Response:")
-      st.write(output)
+      #st.write("AI Response:")
+      #st.write(output)
+      if 'text' in output:
+          st.write("AI Response:")
+          st.print(output['text'])
+          if 'sourceDocuments' in output:
+              for doc in output['sourceDocuments']:
+                  if 'metadata' in doc and 'source' in doc['metadata']:
+                      source_url = doc['metadata']['source']
+                      st.write(f"Source: {source_url}")
