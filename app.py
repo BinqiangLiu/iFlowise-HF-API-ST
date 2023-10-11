@@ -5,7 +5,7 @@ import os
 import sys
 
 st.set_page_config(page_title="USinoIP Website AI Assistant.", layout="wide")
-st.subheader("Ask USinoIP AI Assistant.")
+st.subheader("Ask USinoIP AI Assistant. | 优赛诺官网人工智能客服")
 
 css_file = "main.css"
 with open(css_file) as f:
