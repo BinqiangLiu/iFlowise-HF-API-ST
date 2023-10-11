@@ -17,7 +17,7 @@ def query(payload):
     response = requests.post(API_URL, json=payload)
     return response.json()
 
-user_question = input("Enter your question:")
+user_question=st.text_input("Enter your question:")
 if user_question !="" and not user_question.strip().isspace() and not user_question == "" and not user_question.strip() == "" and not user_question.isspace():
   with st.spinner("AI Thinking...Please wait a while to Cheers!"):      
       output = query({
