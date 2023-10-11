@@ -15,5 +15,5 @@ if user_question !="" and not user_question.strip().isspace() and not user_quest
       output = query({
       "question": input_question,
     })
-    st.write("AI Response:")
-    st.write(output)
+      st.write("AI Response:")
+      st.write(output)
