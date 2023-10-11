@@ -20,8 +20,9 @@ if user_question !="" and not user_question.strip().isspace() and not user_quest
       #st.write(output)
       if 'text' in output:
           st.write("AI Response:")
-          st.print(output['text'])
+          st.write(output['text'])
           if 'sourceDocuments' in output:
+              st.write("Source:")
               for doc in output['sourceDocuments']:
                   if 'metadata' in doc and 'source' in doc['metadata']:
                       source_url = doc['metadata']['source']
