@@ -1,4 +1,15 @@
+import streamlit as st
 import requests
+from pathlib import Path
+import os
+import sys
+
+st.set_page_config(page_title="USinoIP Website AI Assistant.", layout="wide")
+st.subheader("Ask USinoIP AI Assistant.")
+
+css_file = "main.css"
+with open(css_file) as f:
+    st.markdown("<style>{}</style>".format(f.read()), unsafe_allow_html=True)
 
 API_URL = "https://binqiangliu-iflowiseai.hf.space/api/v1/prediction/d60ab382-f51a-4408-ba9a-53613811ecb5"
 
